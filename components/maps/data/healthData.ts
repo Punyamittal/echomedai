@@ -32,7 +32,7 @@ function generateClusteredPoints(
     // Choose randomly whether this point belongs to a cluster or is more scattered
     const isInCluster = Math.random() < 0.7; // 70% of points will be in clusters
     
-    let lat, lng;
+    let lat: number, lng: number;
     
     if (isInCluster) {
       // Choose a random cluster center

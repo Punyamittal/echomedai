@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heart, Brain, Dumbbell, Pill, Utensils, Microscope, BabyIcon, EyeIcon, ToothIcon, LungsIcon } from "lucide-react";
+import { Heart, Brain, Dumbbell, Pill, Utensils, Microscope, Baby, Eye, Smile, Stethoscope } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TopicCategory {
@@ -52,25 +52,25 @@ const categories: TopicCategory[] = [
   { 
     id: "pediatrics",
     title: "Pediatrics", 
-    icon: BabyIcon,
+    icon: Baby,
     color: "bg-pink-100 dark:bg-pink-900/20 text-pink-500 dark:text-pink-400",
   },
   { 
     id: "vision",
     title: "Eye Health", 
-    icon: EyeIcon,
+    icon: Eye,
     color: "bg-teal-100 dark:bg-teal-900/20 text-teal-500 dark:text-teal-400",
   },
   { 
     id: "dental",
     title: "Dental Care", 
-    icon: ToothIcon,
+    icon: Smile,
     color: "bg-sky-100 dark:bg-sky-900/20 text-sky-500 dark:text-sky-400",
   },
   { 
     id: "respiratory",
     title: "Respiratory Health", 
-    icon: LungsIcon,
+    icon: Stethoscope,
     color: "bg-amber-100 dark:bg-amber-900/20 text-amber-500 dark:text-amber-400",
   },
 ];

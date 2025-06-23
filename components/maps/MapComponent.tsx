@@ -141,8 +141,8 @@ export default function MapComponent({
   useEffect(() => {
     // Only run this code on the client side
     if (typeof window !== "undefined") {
-      // This is needed to fix the marker icon issue with Leaflet in Next.js
-      delete L.Icon.Default.prototype._getIconUrl;
+      // Fix Leaflet marker icon issue in Next.js by deleting private property (TypeScript safe cast)
+      delete (L.Icon.Default.prototype as any)._getIconUrl;
       L.Icon.Default.mergeOptions({
         iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
         iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
